@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My profile | Hồ sơ của tôi</title> <!-- cool vietnamese text -->
   
-  <link href="assets/style.css" rel="stylesheet" />
+  <link id="main-stylesheet" href="assets/style.css" rel="stylesheet" />
 
 </head>
 <body class="is-dark">
-   <section class="nes-container with-title is-dark">
+  <div style="padding: 20px 0; text-align: center;">
+    <button type="button" id="toggle-style-btn" class="nes-btn is-primary">Font!</button>
+  </div>
+
+  <section class="nes-container with-title is-dark">
     <p class="title">Profile</p>
     <div style="display: flex; align-items: center; gap: 2rem;">
       <img src="assets/cat.png" alt="A cute cat" class="nes-avatar is-rounded" style="width: 150px; height: 150px;">
@@ -53,14 +57,53 @@
 
                 
     </section>
+    <section class="nes-container with-title is-dark">
+      <p class="title">Pictures</p>
+      <p>i dont have any</p>
+      
+      
+    </section>
 
 <script>
-  const allLinks = document.querySelectorAll('a');
+const allLinks = document.querySelectorAll('a');
+allLinks.forEach(link => {
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener noreferrer');
+});
 
-  allLinks.forEach(link => {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-  });
+const toggleBtn = document.getElementById('toggle-style-btn');
+
+// helper to get cookie
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+// helper to set cookie
+function setCookie(name, value, days) {
+  let expires = '';
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    expires = `; expires=${date.toUTCString()}`;
+  }
+  document.cookie = `${name}=${value || ''}${expires}; path=/`;
+}
+
+// apply font on load
+const fontPref = getCookie('font-style');
+document.body.classList.add(fontPref === 'b' ? 'font-b' : 'font-a');
+
+toggleBtn.addEventListener('click', () => {
+  if (document.body.classList.contains('font-a')) {
+    document.body.classList.replace('font-a', 'font-b');
+    setCookie('font-style', 'b', 30);
+  } else {
+    document.body.classList.replace('font-b', 'font-a');
+    setCookie('font-style', 'a', 30);
+  }
+});
 </script>
 
 </body>

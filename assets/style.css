@@ -1,7 +1,16 @@
 /* css is hard */
 
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://unpkg.com/nes.css@latest/css/nes.min.css');
+
+body.font-a {
+  font-family: 'Press Start 2P', cursive;
+}
+
+body.font-b {
+  font-family: 'Open Sans', monospace;
+}
 
 body {
   display: flex;
