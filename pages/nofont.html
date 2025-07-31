@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My profile | Hồ sơ của tôi</title> <!-- cool vietnamese text -->
+  
+  <link href="../assets/fstyle.css" rel="stylesheet" />
+
+</head>
+<body class="is-dark">
+   <section class="nes-container with-title is-dark">
+    <p class="title">Profile</p>
+    <div style="display: flex; align-items: center; gap: 2rem;">
+      <img src="../assets/cat.png" alt="A cute cat" class="nes-avatar is-rounded" style="width: 150px; height: 150px;">
+      <h1 class="nes-text">Chip</h1>
+    </div>
+   </section>
+  <section class="nes-container with-title is-dark">
+      <p class="title">About Me</p>
+      <p>Hello! I'm Chip, a pretty lazy programmer. I- love explore new stuff and make things.</p>
+    </section>
+
+    <section class="nes-container with-title is-dark">
+      <p class="title">Skills</p>
+      <ul class="nes-list is-disc">
+        <li>Python</li>
+        <li>JavaScript (a little bit of)</li>
+        <li>HTML/CSS (a little bit of)</li>
+      </ul>
+    </section>
+
+    <section class="nes-container with-title is-dark">
+      <p class="title">Projects</p>
+        <p>Here are some projects that i have been worked on :</p>
+      <div class="nes-container">
+        <p><strong>Lution : A boostrapper for sober</strong></p>
+        <p>A boostrapper for sober, adding fflags make easy, support bloxstrap mods!</p>
+        <a href="https://github.com/Wookhq/Lution" class="nes-btn is-primary">View It On Github</a>
+      </div>
+      <div class="nes-container" style="margin-top: 20px;">
+        <p><strong>Scratch2Json : Convert sb3 to JSON</strong></p>
+        <p>A command-line tool for converting Scratch .sb3 projects into structured JSON and compiling structured JSON back into Scratch .sb3 format.</p>
+        <a href="https://github.com/whoschip/scratch2json" class="nes-btn is-primary">View It On Github</a>
+      </div>
+    </section>
+
+    <section class="nes-container with-title is-dark">
+      <p class="title">My socials</p>
+        <a href="https://github.com/whoschip" class="nes-icon github is-large"></a>
+        <a href="https://x.com/whoschip_" class="nes-icon twitter is-large"></a>
+        <a href="https://www.instagram.com/whoschip__/" class="nes-icon instagram is-large"></a>
+
+                
+    </section>
+    <section class="nes-container with-title is-dark">
+      <p class="title">Pictures</p>
+      <p>i dont have any</p>
+      
+      
+    </section>
+
+<script>
+  const allLinks = document.querySelectorAll('a');
+
+  allLinks.forEach(link => {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+</script>
+
+</body>
+</html>
