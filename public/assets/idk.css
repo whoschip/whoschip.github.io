@@ -112,7 +112,7 @@ body {
 }
 
 .shape:nth-child(5) {
-    width: 100px;
+    width: 140px;
     height: 140px;
     bottom: 30%;
     right: 15%;
@@ -128,6 +128,21 @@ body {
     background: linear-gradient(60deg, rgba(150, 255, 100, 0.3), rgba(255, 100, 150, 0.2));
 }
 
+.shape:nth-child(7) {
+    width: 120px;
+    height: 120px;
+    top: 51%;
+    left: 11%;
+    border-radius: 30px;
+    background: linear-gradient(60deg, rgba(0, 81, 255, 0.3), rgba(255, 255, 255, 0.2));
+}
+.shape:nth-child(8) {
+    width: 140px;
+    height: 140px;
+    bottom: 31%;
+    right: 16%;
+    background: linear-gradient(180deg, rgba(126, 255, 100, 0.3), rgba(198, 100, 255, 0.2));
+}
 /* Particle effect for added depth */
 .particle {
     position: absolute;
