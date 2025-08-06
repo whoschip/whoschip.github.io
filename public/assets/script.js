@@ -1,6 +1,21 @@
 let currentPage = 'home';
 const toggleBBtn = document.getElementById('toggle-style-btn');
 
+function initializePage() {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active', 'show');
+    });
+    
+    // Show home page
+    const homePage = document.getElementById('home');
+    if (homePage) {
+        homePage.classList.add('active');
+        requestAnimationFrame(() => {
+            homePage.classList.add('show');
+        });
+    }
+}
+
 function showPage(pageId) {
     // Remove show class first
     document.querySelectorAll('.page').forEach(page => {
@@ -58,7 +73,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     let isMuted = false;
     let lastVolume = 0.05; 
-
+    initializePage();
+    
     if (music && volumeSlider && volumeLabel) {
         music.volume = 0.05;
         volumeSlider.value = 0.05;
