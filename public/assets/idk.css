@@ -52,7 +52,7 @@ body {
     z-index: -1;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(18, 19, 20, 0.9) 0%, rgba(30, 50, 100, 0.7) 50%, rgba(18, 19, 20, 0.9) 100%);
-    animation: gradientShift 15s ease-in-out infinite;
+
 }
 
 /* Gradient animation for background */
@@ -75,7 +75,6 @@ body {
     box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     opacity: 0.6;
-    transition: transform 0.3s ease, transform 1s ease 0.5s; /* Fast repel, 1s return with delay */
 }
 
 .shape:nth-child(1) {
@@ -83,9 +82,7 @@ body {
     height: 150px;
     top: 15%;
     left: 5%;
-    animation-delay: 0s;
     background: linear-gradient(45deg, rgba(100, 150, 255, 0.3), rgba(255, 100, 200, 0.2));
-    transform: rotate(10deg);
 }
 
 .shape:nth-child(2) {
@@ -93,10 +90,8 @@ body {
     height: 120px;
     top: 70%;
     right: 10%;
-    animation-delay: 1.5s;
     border-radius: 20px;
     background: linear-gradient(90deg, rgba(255, 150, 100, 0.3), rgba(100, 255, 150, 0.2));
-    transform: rotate(-15deg);
 }
 
 .shape:nth-child(3) {
@@ -104,9 +99,7 @@ body {
     height: 100px;
     bottom: 10%;
     left: 25%;
-    animation-delay: 3s;
     background: linear-gradient(135deg, rgba(200, 100, 255, 0.3), rgba(100, 255, 255, 0.2));
-    transform: rotate(20deg);
 }
 
 .shape:nth-child(4) {
@@ -114,10 +107,8 @@ body {
     height: 60px;
     top: 5%;
     right: 20%;
-    animation-delay: 2s;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
-    transform: rotate(0deg);
 }
 
 .shape:nth-child(5) {
@@ -125,9 +116,7 @@ body {
     height: 140px;
     bottom: 30%;
     right: 15%;
-    animation-delay: 4s;
     background: linear-gradient(180deg, rgba(255, 200, 100, 0.3), rgba(100, 200, 255, 0.2));
-    transform: rotate(25deg);
 }
 
 .shape:nth-child(6) {
@@ -135,10 +124,8 @@ body {
     height: 120px;
     top: 50%;
     left: 10%;
-    animation-delay: 5s;
     border-radius: 30px;
     background: linear-gradient(60deg, rgba(150, 255, 100, 0.3), rgba(255, 100, 150, 0.2));
-    transform: rotate(-10deg);
 }
 
 /* Particle effect for added depth */
@@ -176,15 +163,6 @@ body {
     animation-delay: 6s;
 }
 
-/* Floating animation for shapes */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(var(--start-rotation, 0deg)) scale(1);
-    }
-    50% {
-        transform: translateY(-30px) rotate(calc(var(--start-rotation, 0deg) + 180deg)) scale(1.1);
-    }
-}
 
 /* Drifting animation for particles */
 @keyframes drift {
