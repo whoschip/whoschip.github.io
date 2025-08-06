@@ -2,13 +2,28 @@ let currentPage = 'home';
 const toggleBBtn = document.getElementById('toggle-style-btn');
 
 function showPage(pageId) {
-    // Hide all pages
+    // Remove show class first
     document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('active');
+        page.classList.remove('show');
     });
-
-    // Show selected page
-    document.getElementById(pageId).classList.add('active');
+    
+    // After a brief delay, remove active and add to new page
+    setTimeout(() => {
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        const newPage = document.getElementById(pageId);
+        if (newPage) {
+            newPage.classList.add('active');
+            // Force a reflow
+            newPage.offsetHeight;
+            // Add show class for animation
+            requestAnimationFrame(() => {
+                newPage.classList.add('show');
+            });
+        }
+    }, 400);
 
     // Update navigation
     document.querySelectorAll('.nav-links a').forEach(link => {
