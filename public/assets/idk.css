@@ -870,3 +870,68 @@ button[type="submit"] {
         width: 100%;
     }
 }
+
+#toggle-sound {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 1.4rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  z-index: 999;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+
+#sound-control {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+#toggle-sound:hover #sound-control {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0%);
+}
+
+#sound-control .track-name {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#volume-label {
+  font-size: 0.9rem;
+  min-width: 40px;
+}
+
+#volume-slider {
+  width: 120px;
+}
