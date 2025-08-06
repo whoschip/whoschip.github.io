@@ -1,129 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My profile | Hồ sơ của tôi</title> <!-- cool vietnamese text -->
-  <link rel="icon" href="/favicon.ico">
-  
-  <link id="main-stylesheet" href="assets/style.css" rel="stylesheet" />
-
-  <!-- embed  -->
-  <meta property="og:title" content="Check out this guy cool profile" />
-  <meta property="og:image" content="https://chip.is-a.dev/assets/cat.png" />
-  <meta property="og:url" content="https://chip.is-a.dev/" />
-  <meta property="og:type" content="website" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index New</title>
+    <link rel="stylesheet" href="assets/idk.css">
 </head>
-<body class="is-dark">
-  <div style="padding: 20px 0; text-align: center;">
-    <button type="button" id="toggle-style-btn" class="nes-btn is-primary">Font!</button>
-  </div>
 
-  <section class="nes-container with-title is-dark">
-    <p class="title">Profile</p>
-    <div style="display: flex; align-items: center; gap: 2rem;">
-      <img src="assets/cat.png" alt="A cute cat" class="nes-avatar is-rounded" style="width: 150px; height: 150px;">
-      <h1 class="nes-text">Chip</h1>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        
     </div>
-   </section>
-  <section class="nes-container with-title is-dark">
-      <p class="title">About Me</p>
-      <p>Hello! I'm Chip, A Vietnamese & a pretty lazy programmer. I love explore new stuff and make things.</p>
-    </section>
+    <script src="assets/slipyshapes.js"></script>
 
-    <section class="nes-container with-title is-dark">
-      <p class="title">Skills</p>
-      <ul class="nes-list is-disc">
-        <li>Python</li>
-        <progress class="nes-progress is-primary" value="80" max="100" style="outline-color: white;";"></progress>
-        <li>JavaScript (a little bit of)</li>
-        <progress class="nes-progress is-error" value="20" max="100" style="outline-color: white;";"></progress>
-        <li>HTML/CSS (a little bit of)</li>
-        <progress class="nes-progress is-error" value="20" max="100" style="outline-color: white;";"></progress>
-      </ul>
-    </section>
+    
+    <header>
+        <div class="container">
+            <nav class="glass">
+                <div class="nav-links">
+                    <a href="#" onclick="showPage('home')" class="active">about</a>
+                    <a href="#" onclick="showPage('projects')">projects</a>
+                    <a href="#" onclick="showPage('socials')">socials</a>
+                    <a onclick="showPage('gurt')">useless</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <section class="nes-container with-title is-dark">
-      <p class="title">Projects</p>
-        <p>Here are some projects that i have been worked on :</p>
-      <div class="nes-container">
-        <p><strong>Lution : A boostrapper for sober</strong></p>
-        <p>A boostrapper for sober, adding fflags make easy, support bloxstrap mods!</p>
-        <a href="https://github.com/Wookhq/Lution" class="nes-btn is-primary">View It On Github</a>
-      </div>
-      <div class="nes-container" style="margin-top: 20px;">
-        <p><strong>Scratch2Json : Convert sb3 to JSON</strong></p>
-        <p>A command-line tool for converting Scratch .sb3 projects into structured JSON and compiling structured JSON back into Scratch .sb3 format.</p>
-        <a href="https://github.com/whoschip/scratch2json" class="nes-btn is-primary">View It On Github</a>
-      </div>
-    </section>
+        
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <div class="hero-image">
+                           <img src="assets/cat.png" alt="really silly" />
+                    </div>
+                    <div class="hero-content">
+                        <h1>chip</h1>
+                        <p>Hello! I'm Chip, A Vietnamese & a pretty lazy programmer. I love explore new stuff and make things.</p>
 
-    <section class="nes-container with-title is-dark">
-      <p class="title">Discord</p>
-       <p align="center">
-        <a href="https://github.com/whoschip/">
-          <img align="center" src="https://lanyard.cnrad.dev/api/1317516380500922499?theme=dark&idleMessage=idk%20just%20chilling&bg=121212"/>
-        </a>
-        </p>      
-      </section>
+                    </div>
+                </section>
 
-    <section class="nes-container with-title is-dark">
-      <p class="title">My socials</p>
-        <a href="https://github.com/whoschip" class="nes-icon github is-large"></a>
-        <a href="https://x.com/whoschip_" class="nes-icon twitter is-large"></a>
-        <a href="https://www.instagram.com/whoschip__/" class="nes-icon instagram is-large"></a>
+                <section class="features">
+                    <div class="feature-card glass">
+                        <img src="assets/python.png" class="feature-icon"></img>
+                        <h3>Python</h3>
+                        <p>yeah i have some python skillz</p>
+                    </div>
+                    
+                    <div class="feature-card glass">
+                        <div class="feature-icon">gurt</div>
+                        <h3>HTML/CSS</h3>
+                        <p>i hate these languages</p>
+                    </div>
+                    
+                </section>
+            </div>
+        </div>
+    </div>
 
-                
-    </section>
-    <section class="nes-container with-title is-dark">
-      <p class="title">Pictures</p>
-      <p>i dont have any</p>
-      
-      
-    </section>
+    <div id="projects" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <h1>my projects</h1>
+                    <p>Here are some projects that i have been worked on</p>
+                </section>
 
-<script>
-const allLinks = document.querySelectorAll('a');
-allLinks.forEach(link => {
-  link.setAttribute('target', '_blank');
-  link.setAttribute('rel', 'noopener noreferrer');
-});
+                <section class="services-grid">
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <h3>Lution - Lution : A boostrapper for sober</h3>
+                        </div>
+                        <p>A boostrapper for sober, adding fflags make easy, support bloxstrap mods!</p>
+                        <a href="https://github.com/Wookhq/Lution" class="cta-button" target="_blank" rel="noopener noreferrer">Learn More</a>
+                    </div>
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <h3>Scratch2Json : Convert sb3 to JSON</h3>
+                        </div>
+                        <p>A command-line tool for converting Scratch .sb3 projects into structured JSON and compiling structured JSON back into Scratch .sb3 format.</p>
+                        <a href="https://github.com/whoschip/scratch2json" class="cta-button" target="_blank" rel="noopener noreferrer">Learn More</a>
+                </section>
+            </div>
+        </div>
 
-const toggleBtn = document.getElementById('toggle-style-btn');
+    
+    </div>
+        <div id="socials" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <h1>socials</h1>
+                    <p>yeah</p>
+                </section>
+            <section class="hero glass">
+                <div class="social-icons-row">
+                    <a class="social-icon" href="https://github.com/whoschip" target="_blank" rel="noopener noreferrer"><img src="assets/brand/github.png" alt="Octopus"></a>
+                    <a class="social-icon" href="https://www.instagram.com/whoschip__/" target="_blank" rel="noopener noreferrer"><img src="assets/brand/instagram.png"alt="Camera"></a>
+                    <a class="social-icon" href="https://x.com/whoschip_" target="_blank" rel="noopener noreferrer"><img src="assets/brand/X.png" alt="X"></a>
+                </div>
+            </section>
+            <h1>Discord</h1>
+            <section class="hero glass">
+                <div class="social-icons-row">
+                   <a href="https://github.com/whoschip/">
+                    <img align="center" src="https://lanyard.cnrad.dev/api/1317516380500922499?theme=dark&idleMessage=idk%20just%20chilling&bg=121212"/>
+                    </a>
+                </div>
+            </section>
 
-// helper to get cookie
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
+            </div>
+        </div>
+    </div>
 
-// helper to set cookie
-function setCookie(name, value, days) {
-  let expires = '';
-  if (days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days*24*60*60*1000));
-    expires = `; expires=${date.toUTCString()}`;
-  }
-  document.cookie = `${name}=${value || ''}${expires}; path=/`;
-}
+<script src="assets/script.js"></script>
 
-// apply font on load
-const fontPref = getCookie('font-style');
-document.body.classList.add(fontPref === 'b' ? 'font-b' : 'font-a');
-
-toggleBtn.addEventListener('click', () => {
-  if (document.body.classList.contains('font-a')) {
-    document.body.classList.replace('font-a', 'font-b');
-    setCookie('font-style', 'b', 30);
-  } else {
-    document.body.classList.replace('font-b', 'font-a');
-    setCookie('font-style', 'a', 30);
-  }
-});
-</script>
-
+    <div id="footer">
+        <div class="container">
+            <footer class="glass">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('home')">yo</a>
+                        <a href="#" onclick="showPage('contact')">github</a>
+                        <a href="indexold.html">old about page</a>
+                    </div>
+                    <div class="copyright">
+                        chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip chip
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
-</html>
