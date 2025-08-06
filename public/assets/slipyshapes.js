@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const config = {
         repelRadius: 200,
         repelStrength: 500, // Increased for a stronger, more noticeable push
-        lerpSpeed: 0.1, // Reduced for a more "slippery" feel
+        lerpSpeed: 0.10, // Reduced for a more "slippery" feel
         friction: 0.9, // A new property to simulate friction
         idleTimeout: 10000 // 10 seconds
     };
