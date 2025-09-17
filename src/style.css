@@ -1,8 +1,4 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: all;
-}
-
-body {
-  background-color: #1e1e2e; /* dark purple vibes */
+  themes: wireframe --default, dark --prefersdark, black;
 }
