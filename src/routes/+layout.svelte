@@ -8,6 +8,7 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<Navbar />
-
-<slot />
+<div data-theme="black">
+  <Navbar />
+  <slot />
+</div>
